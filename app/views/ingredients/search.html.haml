@@ -1,0 +1,11 @@
+%h1 search
+= form_tag 'search', method: :get do
+  = text_field_tag 'query'
+  = submit_tag 'search'
+- if @result
+  %h2 result
+  %h3= @result.name
+  %ul
+  - @result.synonyms.each do |s|
+    %li
+      = s.word
