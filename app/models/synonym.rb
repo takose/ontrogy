@@ -1,3 +1,18 @@
+# ## Schema Information
+#
+# Table name: `synonyms`
+#
+# ### Columns
+#
+# Name                 | Type               | Attributes
+# -------------------- | ------------------ | ---------------------------
+# **`id`**             | `integer`          | `not null, primary key`
+# **`word`**           | `string`           |
+# **`ingredient_id`**  | `integer`          |
+# **`created_at`**     | `datetime`         | `not null`
+# **`updated_at`**     | `datetime`         | `not null`
+#
+
 require 'csv'
 class Synonym < ApplicationRecord
   belongs_to :ingredient

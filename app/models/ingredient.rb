@@ -1,3 +1,18 @@
+# ## Schema Information
+#
+# Table name: `ingredients`
+#
+# ### Columns
+#
+# Name              | Type               | Attributes
+# ----------------- | ------------------ | ---------------------------
+# **`id`**          | `integer`          | `not null, primary key`
+# **`category`**    | `string`           |
+# **`name`**        | `string`           |
+# **`created_at`**  | `datetime`         | `not null`
+# **`updated_at`**  | `datetime`         | `not null`
+#
+
 require 'csv'
 class Ingredient < ApplicationRecord
   has_many :synonyms
