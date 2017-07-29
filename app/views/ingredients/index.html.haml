@@ -2,4 +2,5 @@
 .ingredients
   - @ingredients.each do |ingredient|
     .ingredient
-      = ingredient
+      .graph{style: "height: #{ingredient.synonyms.count*1.5}px"}
+        = ingredient.name
