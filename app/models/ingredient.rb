@@ -1,7 +1,8 @@
 require 'csv'
 class Ingredient < ApplicationRecord
   validates_uniqueness_of :name
-  def self.insert_csv
+
+  def self.insert_data
     destroy_all
     files = ["lib/data/synonym.tsv", "lib/data/attribute.tsv", "lib/data/hprt.tsv"]
     files.each do |file|
