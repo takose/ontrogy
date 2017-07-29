@@ -1,5 +1,6 @@
 require 'csv'
 class Ingredient < ApplicationRecord
+  has_many :synonyms
   validates_uniqueness_of :name
 
   def self.insert_data
